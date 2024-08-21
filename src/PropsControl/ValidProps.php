@@ -7,6 +7,8 @@ use Nette\Utils\Json;
 use stdClass;
 use Wavevision\PropsControl\Exceptions\NotAllowed;
 use function array_key_exists;
+use function array_keys;
+use function implode;
 
 final class ValidProps extends stdClass
 {
@@ -100,7 +102,7 @@ final class ValidProps extends stdClass
 	public function &__get(string $name)
 	{
 		if (!$this->isSet($name)) {
-			throw new NotAllowed("Cannot read an undeclared prop '$name'.");
+			throw new NotAllowed(sprintf("Cannot read an undeclared prop '$name' available props are [%s].", implode(', ', array_keys($this->values))));
 		}
 		return $this->values[$name];
 	}
