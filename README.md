@@ -13,7 +13,7 @@ CSS class and style attribute helpers and automatic template file assignment.
 Via [Composer](https://getcomposer.org)
 
 ```bash
-composer require simpliko_cz/wavevision_props-control
+composer require wavevision/props-control
 ```
 
 ## Usage

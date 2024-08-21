@@ -1,5 +1,5 @@
 {
-  "name": "simpliko_cz/wavevision_props-control",
+  "name": "wavevision/props-control",
   "description": "Create smart UI components for Nette Framework.",
   "type": "library",
   "license": "MIT",
