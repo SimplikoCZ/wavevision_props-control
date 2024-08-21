@@ -16,7 +16,7 @@ final class ProcessedProps
 
     public function __construct($values)
     {
-        $this->values = json_decode(json_encode($values), TRUE)?:[];
+        $this->values = $values ? (array) $values : [];
     }
 
     /**
