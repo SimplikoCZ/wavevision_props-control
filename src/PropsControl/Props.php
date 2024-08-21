@@ -45,7 +45,7 @@ abstract class Props
 	 */
 	final public function process(?array $data = null): ValidProps
 	{
-		$this->data = $data ?? $this->getData();
+		$this->data = $data ?: $this->getData();
 		/** @var ProcessedProps $props */
 		$props = $this->processor->process($this->schema, $this->data);
 		return new ValidProps($this, $props->getValues());
