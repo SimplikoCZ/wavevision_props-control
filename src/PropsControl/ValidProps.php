@@ -32,7 +32,7 @@ final class ValidProps extends stdClass
 	 */
 	public function get(string $prop)
 	{
-		return $this->getNullable($prop);
+        return $this->values[$prop] ?? null;
 	}
 
 	/**
