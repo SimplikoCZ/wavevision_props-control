@@ -29,7 +29,8 @@ abstract class Props
 		$this->processor = new Processor();
 	}
 
-	final public function schema():Structure{
+	final protected function schema(): Structure
+	{
 		return Expect::structure($this->define())->castTo(ProcessedProps::class);
 	}
 
